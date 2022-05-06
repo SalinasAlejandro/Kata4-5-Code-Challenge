@@ -12,8 +12,13 @@ describe("Test for StudentService", () => {
     test("2. Obtain emails with haveCertification true", () => {
         const students = Reader.readJsonFile("test/visualpartners.test.json");
         const studentsFilter = StudentService.getEmailWithHaveCertification(students);
-        console.log(studentsFilter);
         expect(studentsFilter.length).toBe(29);
+    });
+
+    test("3. Obtein Students with Credits more than 500", () => {
+        const students = Reader.readJsonFile("test/visualpartners.test.json");
+        const studentsFilter = StudentService.getStudentsWithCreditsMoreThan500(students);
+        expect(studentsFilter.length).toBe(27);
     });
 
 });
