@@ -9,4 +9,11 @@ describe("Test for StudentService", () => {
         expect(studentsFilter.length).toBe(51);
     });
 
+    test("2. Obtain emails with haveCertification true", () => {
+        const students = Reader.readJsonFile("test/visualpartners.test.json");
+        const studentsFilter = StudentService.getEmailWithHaveCertification(students);
+        console.log(studentsFilter);
+        expect(studentsFilter.length).toBe(29);
+    });
+
 });
