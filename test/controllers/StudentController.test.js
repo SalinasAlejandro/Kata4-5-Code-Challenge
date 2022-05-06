@@ -7,4 +7,9 @@ describe("Test for StudentController", () => {
         expect(students.length).toBe(51);
     });
 
+    test("2. Test getEmailWithHaveCertification", () => {
+        const students = StudentController.getEmailWithHaveCertification();
+        expect(students.length).toBe(29);
+    });
+
 });
