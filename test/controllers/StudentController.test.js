@@ -12,4 +12,9 @@ describe("Test for StudentController", () => {
         expect(students.length).toBe(29);
     });
 
+    test("3. Test getStudentsWithCreditsMoreThan500", () => {
+        const students = StudentController.getStudentsWithCreditsMoreThan500();
+        expect(students.length).toBe(27);
+    });
+
 });
